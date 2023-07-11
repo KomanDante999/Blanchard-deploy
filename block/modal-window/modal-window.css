@@ -1,0 +1,61 @@
+.modal-window__overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  transition-property: opacity, visibility;
+}
+
+.modal-window__item {
+  width: 90vw;
+  overflow-y: auto;
+  max-height: 90vh;
+  min-height: 50vh;
+}
+
+.modal-window__item.is-visible {
+  display: flex;
+}
+
+.modal-window__inner {
+  padding: 20px;
+}
+
+.modal-window__time {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+
+  .modal-window__img {
+    width: 45%;
+    height: auto;
+  }
+
+  .modal-window__inner {
+    height: 100%;
+    padding: 60px 40px; 
+  }
+  
+  .modal-window__time {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .modal-window__item {
+    width: 60vw;
+  }
+  
+  .modal-window__inner {
+    padding: 70px 50px; 
+  }
+}
+
+@media (min-width: 1440px) {
+  
+  .modal-window__item {
+    width: 50vw;
+  }
+}

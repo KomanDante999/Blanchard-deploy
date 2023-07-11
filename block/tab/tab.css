@@ -1,0 +1,136 @@
+/*=======================  tab-counry  ==================*/
+/*part*/
+.coutry-part__item:not(:last-child) {
+  margin-right: 32px;
+  margin-bottom: 8px;
+}
+
+/*target*/
+.coutry-target__item.is-active {
+  display: block;
+  animation-name: opacity_0_1;
+  animation-duration: 600ms;
+}
+
+@media (min-width: 768px) {
+  
+  .coutry-part {
+    padding-top: 10px;
+  }
+
+  .coutry-part__item:not(:last-child) {
+    margin-right: 54px;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .coutry-part {
+    padding-top: 18px;
+  }
+
+  .coutry-part__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  
+  .coutry-part {
+    padding-top: 11px;
+  }
+}
+
+/*=======================  tab-artist  ==================*/
+/* part */
+.artist-part {
+  display: inline-block;
+  padding-right: 90px;
+  column-count: 1;
+  column-width: auto;
+}
+
+.artist-part__btn.is-active {
+  color: var(--c-vio700);
+}
+
+/* target */
+.ui-widget button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.artist-targer__item.is-active {
+  display: block;
+  animation-name: opacity_0_1;
+  animation-duration: 600ms;
+}
+
+.artist-targer__img {
+  margin-bottom: 10px;
+}
+
+.artist-targer__title {
+  margin-bottom: 4px;
+}
+
+@media (min-width: 412px) {
+
+  .artist-part {
+    padding-right: 0;
+    column-count: 2;
+    column-gap: 30px;
+  }
+  
+}
+
+@media (min-width: 576px) {
+
+  .artist-part {
+    padding-right: 40px;
+    column-gap: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  
+  .artist-part {
+    padding-right: 0;
+    column-count: 3;
+    column-gap: 51px;
+  }
+  
+  .artist-targer__img {
+    margin-bottom: 20px;
+  }
+  
+  .artist-targer__title {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .artist-part {
+    column-count: 2;
+    column-gap: 66px;
+  }
+}
+
+@media (min-width: 1440px) {
+  
+  .artist-part {
+    column-count: 3;
+    column-gap: 50px;
+  }
+}
+
+@media (min-width: 1920px) {
+  
+  .artist-part {
+    padding-right: 124px;
+    column-gap: 53px;
+  }
+
+}
+

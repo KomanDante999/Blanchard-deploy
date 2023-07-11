@@ -1,0 +1,56 @@
+.account {
+  width: 115px;
+  min-height: 40px;
+}
+
+.account__icon {
+  width: auto;
+  height: 9px;
+}
+
+.account:active .account__icon_short {
+  display: none;
+}
+
+.account:active .account__icon_long {
+  display: inline;
+  transform: translateX(-1.5px);
+}
+
+.account:active .account__text {
+  transform: translateX(-1.5px);
+}
+
+@media (min-width: 768px) {
+
+  .account:hover:not(:active) .account__icon_short {
+    display: none;
+  }
+
+  .account:hover:not(:active) .account__icon_long {
+    display: inline;
+  }
+}
+
+@media (min-width: 576px) {
+
+  .account__icon {
+    width: auto;
+    height: 13px;
+  }
+
+  .account {
+    width: 257px;
+    min-height: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .account {
+    width: auto;
+    max-width: 260px;
+    height: auto;
+    min-height: auto;
+  }
+}

@@ -1,0 +1,154 @@
+:root {
+  --burger-w: 25px; /*ширина бургера*/
+  --burger-h: 18px;
+  --burger-line-h: 2px; /*высота линий бургера*/
+  --burger-line-1: 25px; /*ширина верхней линии*/
+  --burger-line-2: 16px; /*ширина средней линии*/
+  --burger-line-3: 10px; /*ширина нижней линии*/
+  --burger-line-X: 19px; /*ширина линии в состоянии Х*/
+  --burger-trsX-hov: -3px; /* смещение x при hover*/
+  --burger-trsY-hov: -3px; /* смещение y при hover*/
+  /* расположение линий бургера задается в HTML классу burger атомартными классами a-it-start (влево), a-it-end (вправо) a-it-center (по центру) */
+  --burger-centerY: calc((var(--burger-line-X) - var(--burger-line-h))/2); /* вычисляемое значение центра бургера*/
+}
+
+.burger {
+  width: var(--burger-w);
+  height: var(--burger-h);
+}
+
+.burger__line {
+  height: var(--burger-line-h);
+  transform-origin: center;
+}
+
+.burger__line_1 {
+  width: var(--burger-line-1);
+}
+
+.burger__line_2 {
+  width: var(--burger-line-2);
+}
+
+.burger__line_3 {
+  width: var(--burger-line-3);
+}
+
+.burger:hover .burger__line {
+  background-color: var(--c-vio200);
+}
+
+.burger.is-opened {
+  width: var(--burger-line-X);
+  height:var(--burger-line-X);
+}
+
+.burger.is-opened .burger__line {
+  width: 100%;
+}
+
+.burger.is-opened .burger__line_1 {
+  transform: translateY(var(--burger-centerY)) rotate(135deg);
+}
+
+.burger.is-opened .burger__line_2 {
+  transform: rotate(135deg);
+  background-color: transparent;
+}
+
+.burger.is-opened .burger__line_3 {
+  transform: translateY(calc((var(--burger-centerY)) * -1)) rotate(225deg);
+}
+
+.burger-menu {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 200px;
+  height: 100vh;
+  max-height: 355px;
+  padding-top: 46px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 27px;
+}
+
+.burger-menu.is-opened {
+  animation-name: translateX-fr-100pr-to0;
+  animation-duration: 600ms;
+}
+
+.burger-menu.is-closed {
+  animation-name: translateX-fr0-to-100pr;
+  animation-duration: 600ms;
+}
+
+.menu {
+  margin-bottom: 18px;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --burger-w: 36px; /*ширина бургера*/
+    --burger-h: 27px;
+    --burger-line-h: 3px; /*высота линий бургера*/
+    --burger-line-1: 36px; /*ширина верхней линии*/
+    --burger-line-2: 28px; /*ширина средней линии*/
+    --burger-line-3: 24px; /*ширина нижней линии*/
+    --burger-line-X: 37px; /*ширина линии в состоянии Х*/
+    --burger-trsX-hov: -4px; /* смещение x при hover*/
+    --burger-trsY-hov: -4px; /* смещение y при hover*/
+  }
+
+  .burger-menu {
+    min-height: 440px;
+    max-height: 768px;
+    padding-top: 115px;
+    padding-left: 49px;
+    padding-right: 49px;
+    padding-bottom: 51px;
+  }
+
+  .menu {
+    margin-bottom: 126px;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .burger:hover {
+    transform: translate(var(--burger-trsX-hov), var(--burger-trsY-hov));
+  }
+
+  .is-opened.burger:hover:not(:active) {
+    transform: translate(var(--burger-trsX-hov), var(--burger-trsY-hov));
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .burger-menu {
+    width: auto;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    padding: 0;
+  }
+
+  .menu {
+    margin-bottom: 0;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .menu__item {
+    margin-right: 63px;
+  }
+
+}

@@ -1,0 +1,43 @@
+  /* ======= checkbox Blanchard theme  ====== */
+
+.check-blanchard {
+  padding-left: 24px;
+}
+
+.check-blanchard__item.is-active {
+  color: var(--c-vio200);
+
+}
+
+.check-blanchard__item::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -24px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--c-white);
+  transition: border var(--duration-lg) var(--function-e);
+}
+
+.check-blanchard__item:focus::before,
+.check-blanchard__item:hover::before,
+.check-blanchard__item.is-active::before {
+  border: 1px solid var(--c-vio200);
+}
+
+.check-blanchard__item::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -20px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  transition: background-color var(--duration-lg) var(--function-e);
+}
+
+.check-blanchard__item.is-active::after {
+  background-color: var(--c-vio200);
+
+}

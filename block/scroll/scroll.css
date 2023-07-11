@@ -1,0 +1,13 @@
+.simplebar-track.simplebar-vertical {
+  width: 2px;
+  background-color: var(--c_black);
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--c-white);
+  opacity: 1;
+}

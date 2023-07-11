@@ -1,0 +1,88 @@
+/*used blocks: check-spoiler, button check-spoiler header, button check-spoiler V,
+checkbox check-spoiler, btn-X check-spoiler, input-price, slider-editions,
+button nav-slider dark left, button nav-slider dark right, slider-editions__btn*/
+.editions {
+  background-image: url(img/edition-back_320.jpg);
+}
+
+.editions__container {
+  padding-bottom: 5px;
+}
+
+.editions__top-wrap {
+  margin-bottom: 50px;
+}
+
+.editions__title {
+  margin-bottom: 12px;
+}
+
+.editions__check-spoiler {
+  margin-bottom: 9px;
+}
+
+@media (min-width: 576px) {
+
+  .editions {
+    background-image: url(img/edition-back_768.jpg);
+  }
+
+  .editions__container {
+    padding-top: 4px;
+    padding-bottom: 5px;
+  }
+
+  .editions__title {
+    margin-bottom: 14px;
+  }
+
+  .editions__check-spoiler {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .editions {
+    background-image: url(img/edition-back_1024.jpg);
+  }
+
+  .editions__container {
+    padding-top: 0;
+    padding-bottom: 11px;
+  }
+
+  .editions__top-wrap {
+    width: 277px;
+    margin-bottom: 0;
+  }
+
+  .editions__check-spoiler {
+    margin-bottom: 16px;
+  }
+  
+  :root {
+    /* function linear scale  */
+    --slider-editions_max-sz: 1150;    /* max size for max viewport (without a unit of measurement!!!)*/
+    --slider-editions_min-sz: 629;     /* mix size for min viewport  (without a unit of measurement!!!)*/
+    --slider-editions_max-M: 1920;    /* max viewport  (without a unit of measurement!!!)*/
+    --slider-editions_min-M: 1024;    /* min viewport  (without a unit of measurement!!!)*/
+    --slider-editions_fn-scale: calc(var(--slider-editions_min-sz)*1px + (var(--slider-editions_max-sz) - var(--slider-editions_min-sz))*((100vw - var(--slider-editions_min-M)*1px)/(var(--slider-editions_max-M) - var(--slider-editions_min-M))));
+  }
+
+  .editions__slider-editions {
+    width: var(--slider-editions_fn-scale);
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .editions {
+    background-image: url(img/edition-back_1920.jpg);
+  }
+
+  .editions__container {
+    padding-bottom: 2px;
+  }
+}

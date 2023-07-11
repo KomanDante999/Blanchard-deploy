@@ -1,0 +1,99 @@
+/*used blocks:  yandex-map, feedback-form, social icon watsap, social icon telegramm */
+.contacts__title {
+  margin-bottom: 11px;
+}
+
+.contacts__address {
+  margin-bottom: 15px;
+}
+
+.contacts__wrap-map {
+  margin-right: calc(var(--pd-cont)*-1);
+  margin-left: calc(var(--pd-cont)*-1);
+  height: 320px;
+  margin-bottom: 19px;
+}
+
+@media (min-width: 576px) {
+  
+  :root {
+    --contacts-form-w: 380; /*width contacts__feedback-form*/
+    --container-w: 768; /*width container*/
+    --contacts-container-w: calc(var(--container-w) - 2*var(--pd-cont-abs)); /*width contacts-container*/
+  }
+
+  .contacts__feedback-form {
+    width: calc(var(--contacts-form-w) / var(--contacts-container-w)  * 100% + var(--pd-cont));
+    min-height: 699px;
+    margin-left: calc(var(--pd-cont) * -1);
+    padding-top: 35px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: calc(var(--pd-cont) - 1px);
+  }
+
+  .contacts__wrap-map {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .contacts__address {
+    margin-bottom: 28px;
+  }
+  
+}
+
+@media (min-width: 768px) {
+
+  .contacts__title {
+    margin-bottom: 16px;
+  }
+
+  .contacts__feedback-form {
+    padding-right: 45px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  :root {
+    --contacts-form-w: 437; /*width contacts__feedback-form*/
+    --container-w: 1024; /*width container*/
+
+  }
+
+  .contacts__feedback-form {
+    min-height: 700px;
+    padding-right: 102px;
+  }
+}
+
+@media (min-width: 1440px) {
+  
+  :root {
+    --contacts-form-w: 522; /*width contacts__feedback-form*/
+    --container-w: 1700; /*width container*/
+  }
+  
+  .contacts__feedback-form {
+    padding-top: 17px;
+    padding-right: 122px;
+  }
+}
+
+@media (min-width: 1700px) {
+
+  .contacts__feedback-form {
+    width: calc(var(--contacts-form-w) / var(--contacts-container-w)  * 100% + ((-100vw + 100%) / -2));
+    margin-left: calc((-100vw + 100%) / 2);
+    padding-left: calc(((-100vw + 100%) / -2) - 1px);
+  }
+  
+  .contacts__wrap-map {
+    width: 100%;
+    margin-right: calc((-100vw + 100%) / 2);
+  }
+}

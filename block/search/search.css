@@ -1,0 +1,139 @@
+.search-open {
+  width: 18px;
+  height: 18px;
+}
+
+.search {
+  width: 100vw;
+  top: 0;
+  right: 0;
+  height: 75px;
+  padding-top: 15px;
+  padding-left: calc(var(--pd-cont) + 42px);
+  padding-right: var(--pd-cont);
+  padding-bottom: 18px;
+}
+
+.search.is-opened {
+  animation-name: translateX-fr100pr-to0;
+  animation-duration: 600ms;
+}
+
+.search.is-closed {
+  animation-name: translateX-fr0-to100pr;
+  animation-duration: 600ms;
+}
+
+.search__input {
+  width: 60vw;
+  padding-left: 10px;
+  margin-right: 34px;
+  margin-bottom: 2px;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: transparent;
+  transition: opacity 500ms ease;
+}
+
+.search__input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.search__submit {
+  width: 17px;
+  height: 17px;
+  margin-right: 2px;
+}
+
+.search__close {
+  width: 15px;
+  height: 15px;
+}
+
+@media (min-width: 576px) {
+
+  .search-open {
+    width: 27px;
+    height: 27px;
+  }
+
+  .search {
+    height: 100px;
+    padding-top: 0;
+    padding-left: var(--pd-cont);
+    padding-right: var(--pd-cont);
+    padding-bottom: 0;
+  }
+
+  .search__input {
+    width: 100%;
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+
+  .search__submit {
+    width: 35.5px;
+    height: 35px;
+    margin-right: 9px;
+  }
+
+  .search__close {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .header__search-open {
+    width: 30px;
+    height: 30px;
+  }
+
+  .search {
+    width: 310px;
+    height: 36px;
+    top: 35px;
+    right: var(--pd-cont);
+    padding: 0;
+  }
+
+  .search__submit {
+    width: 42px;
+    height: 42px;
+  }
+
+  .search__close {
+    margin-right: 6px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .search {
+    width: 251px;
+    height: 26px;
+    top: auto;
+    bottom: -49px;
+  }
+
+  .search__input {
+    padding-left: 0;
+  }
+
+  .search__input::-webkit-input-placeholder {
+    color: inherit;
+  }
+
+  .search__submit {
+    margin-right: 9px;
+    width: 30px;
+    height: 30px;
+  }
+}

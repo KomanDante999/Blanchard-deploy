@@ -1,0 +1,50 @@
+/*used bloks: logo, burger-menu, drop-menu, search, account, button drop-menu, button X search close*/
+
+.header__top-container {
+  padding-top: 12px;
+  padding-bottom: 10.58px;
+}
+
+.header__logo {
+  width: 97px;
+  height: calc(173/40*100%);
+  margin-right: 7px;
+}
+
+@media (min-width: 576px) {
+
+  .header__top-container {
+    padding-top: 29px;
+    padding-bottom: 27.55px;
+  }
+
+  .header__logo {
+    width: 188px;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .header__logo {
+    width: 188px;
+    margin-right: 7px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .header__top-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .header__logo {
+    width: 173px;
+    height: 40px;
+  }
+
+  .header__nav {
+    width: calc(1250 / 1600 * 100%);
+  }
+}

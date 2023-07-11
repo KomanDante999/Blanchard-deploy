@@ -1,0 +1,76 @@
+/*used bloks: slider-hero, button  style prim*/
+.hero__container {
+  padding-top: 32px;
+  padding-bottom: 45px;
+}
+
+.hero__content {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.hero__title {
+  margin-bottom: 14px;
+}
+
+.hero__desc {
+  margin-bottom: 40px;
+}
+
+.hero__button {
+  min-width: 200px;
+  max-width: 280px;
+  padding: 10px 16px 11px 17px;
+}
+
+@media (min-width: 576px) {
+
+  .hero__container {
+    padding-top: 113px;
+    padding-bottom: 115px;
+  }
+
+  .hero__content {
+    max-width: 661px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .hero__title {
+    padding-right: 58px;
+    margin-bottom: 12px;
+  }
+
+  .hero__desc {
+    margin-bottom: 132px;
+  }
+
+  .hero__button {
+    min-width: 314px;
+    max-width: 400px;
+    padding: 20px 34px 21px 33px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .hero__container {
+    padding-top: 72px;
+    padding-bottom: 122px;
+  }
+
+  .hero__content {
+    max-width: 580px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .hero__title {
+    padding-right: 0;
+    margin-bottom: 18px;
+  }
+
+  .hero__desc {
+    margin-bottom: 92px;
+  }
+}

@@ -1,0 +1,45 @@
+/*used blocks: tippy-project, button tippy-project, projects link, slider-project, button nav-slider light*/
+.projects__title {
+  margin-bottom: 12px;
+}
+.projects__text {
+  margin-bottom: 10px;
+}
+
+.projects__slider-title {
+  margin-bottom: 11px;
+}
+
+@media (min-width: 768px) {
+
+  .projects__title {
+    margin-bottom: 16px;
+  }
+
+  .projects__text {
+    padding-right: 10px;
+    margin-bottom: 25px;
+  }
+
+  .projects__slider-title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .projects__text {
+    margin-bottom: 19px;
+  }
+
+  .projects__slider-title {
+    margin-bottom: 23px;
+  }
+}
+@media (min-width: 1440px) {
+
+  .projects__text {
+    padding-right: 0;
+    width: 65%;
+  }
+}

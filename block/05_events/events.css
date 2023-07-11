@@ -1,0 +1,18 @@
+/*used blocks: slider-events, events link, button  style second*/
+.events__title {
+  margin-bottom: 13px;
+}
+
+@media (min-width: 576px) {
+
+  .events__title {
+    margin-bottom: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .events__title {
+    margin-bottom: 18px;
+  }
+}

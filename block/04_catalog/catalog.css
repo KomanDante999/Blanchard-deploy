@@ -1,0 +1,98 @@
+/*used bloks: tab, button tab-country, accordeon button V, smooth-scrolling */
+.catalog__top-inner {
+  margin-bottom: 13px;
+}
+
+.catalog__title {
+  margin-bottom: 12px;
+}
+
+.catalog__accordion-tab {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 576px) {
+  
+  .catalog__top-inner {
+    margin-bottom: 16px;
+  }
+
+  .catalog__title {
+    margin-bottom: 0;
+    margin-right: 39px;
+  }
+
+  .catalog__desc {
+    margin-bottom: 21px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  :root {
+    /* function linear scale  */
+    --artist-targer_max-sz: 750;    /* max size for max viewport (without a unit of measurement!!!)*/
+    --artist-targer_min-sz: 437;     /* mix size for min viewport  (without a unit of measurement!!!)*/
+    --artist-targer_max-M: 1440;    /* max viewport  (without a unit of measurement!!!)*/
+    --artist-targer_min-M: 1024;    /* min viewport  (without a unit of measurement!!!)*/
+    --artist-targer_fn-scale: calc(var(--artist-targer_min-sz)*1px + (var(--artist-targer_max-sz) - var(--artist-targer_min-sz))*((100vw - var(--artist-targer_min-M)*1px)/(var(--artist-targer_max-M) - var(--artist-targer_min-M))));
+
+    --catalog__accordeon-cat_max-sz: 800;    /* max size for max viewport (without a unit of measurement!!!)*/
+    --catalog__accordeon-cat_min-sz: 437;     /* mix size for min viewport  (without a unit of measurement!!!)*/
+    --catalog__accordeon-cat_max-M: 1440;    /* max viewport  (without a unit of measurement!!!)*/
+    --catalog__accordeon-cat_min-M: 1024;    /* min viewport  (without a unit of measurement!!!)*/
+    --catalog__accordeon-cat_fn-scale: calc(var(--catalog__accordeon-cat_min-sz)*1px + (var(--catalog__accordeon-cat_max-sz) - var(--catalog__accordeon-cat_min-sz))*((100vw - var(--catalog__accordeon-cat_min-M)*1px)/(var(--catalog__accordeon-cat_max-M) - var(--catalog__accordeon-cat_min-M))));
+  }
+
+  .catalog__top-inner {
+    margin-bottom: 8px;
+  }
+
+  .catalog__artist-targer {
+    width: var(--artist-targer_fn-scale);
+    margin-right: 50px;
+  }
+
+  .catalog__title {
+    margin-right: 43px;
+  }
+
+  .catalog__coutry-part {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .catalog__desc {
+    margin-bottom: 40px;
+    max-width: 1080px;
+  }
+
+  .catalog__accordion-tab {
+    width: var(--catalog__accordeon-cat_fn-scale);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  .catalog__title {
+    margin-right: 40px;
+  }
+
+  .catalog__artist-targer {
+    width: 750px;
+  }
+
+  .catalog__accordion-tab {
+    width: 800px;
+  }
+
+  .catalog__coutry-part {
+    margin-top: 0;
+  }
+
+  .catalog__top-inner {
+    margin-bottom: 15px;
+  }
+}
+
